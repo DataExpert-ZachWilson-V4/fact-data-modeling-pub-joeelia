@@ -1,5 +1,3 @@
-INSERT INTO
-  crouton.host_activity_reduced
 WITH
   yesterday AS (
     SELECT
@@ -15,7 +13,7 @@ WITH
     FROM
       crouton.daily_web_metrics
     WHERE
-      DATE = DATE('2023-08-03')
+      DATE = DATE('2023-08-02')
   )
 SELECT
   COALESCE(t.host, y.host) AS host,
